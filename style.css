@@ -1,0 +1,33 @@
+body{ height:100% } 
+
+div.fullscreen{ 
+display:block; 
+
+/*помещаем div в левом верхнем углу экрана*/ 
+position:absolute; 
+top:0; 
+left:0; 
+
+/*и ширину с высотой выставляем в 100% ширины/высоты экрана*/ 
+width:100%; 
+height:100%; 
+background-color: green;
+} 
+
+.syn{
+  width:100%;
+  height:33%;
+  background-color:#fbfbfb;
+}
+
+.search{
+  width:100%;
+  height:34%;
+  background-color:#d9d9d9;
+}
+
+.ant{
+  width:100%;
+  height:33%;
+  background-color:#fbfbfb;
+}
