@@ -53,7 +53,7 @@ background-color: green;
 .inpWrap {
 	position: fixed;
   	left: 25%;
-  	top: 60%; 
+  	top: 58%; 
     /*-webkit-transform: translate(-50%, 0); */
     
 }
@@ -90,7 +90,7 @@ background-color: green;
   width:100%;
   padding-top:50%;
     padding-bottom:50%;
-  margin-top:0em;
+  margin-top:-0.8em;
     
   text-align:center;
   color:#e2eaf3;
@@ -105,8 +105,8 @@ background-color: green;
   width: 40px;
   height: 40px;
   position:fixed;
-  top: 56%;
-  left: 80%;
+  top: 57%;
+  left: 79%;
    border-top: 1px solid #96d1f8;
    background: #65a9d7;
    box-shadow: 0 0 2px gray;
