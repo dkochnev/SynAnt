@@ -1,23 +1,63 @@
 $(document).ready(function(){
 
-	var apiKey     = '0771a4c95ca7e23d41e33f67a1da0000';
-	var apiURL     = 'http://words.bighugelabs.com/api/2/' + apiKey; 
-
+	var apiKey     = '86841b8e762d29ab232698708675cd6d';
+	var apiURL     = 'https://api.forecast.io/forecast/' + apiKey; 
+	var defaultLat = '40.64141';
+	var defaultLng = '-73.99121';
 
 	
-		
-	function getWordSearch(word,json) {
-		apiURL += "/" + word + "/" + json;
+	if ( Modernizr.geolocation ) {
+		navigator.geolocation.getCurrentPosition(success, error);
+	}
+	else {
+	
+	}
+
+	
+	function success(position) {
+		console.log(position);
+		getWeatherWithPos(position.coords.latitude,position.coords.longitude);
+	}
+
+	function error(error) {
+		console.log(error);
+		getWeatherWithPos(defaultLat,defaultLng);
+	}
+
+	
+	function getWeatherWithPos(lat,lng) {
+		apiURL += "/" + lat + "," + lng;
 		console.log(apiURL);
+
+		// Make a request to forecast.io
+		$.ajax({
+			url: apiURL,
+			type: "GET",
+			crossDomain: true,
+            dataType: 'jsonp',
+			success: function (response) {
+				// The request succeeded
+				console.log(response);
+				parseWeather(response);
+				
+			},
+			error: function (xhr, status) {
+				// The request failed
+		    	console.log(status);
+		    
+		    	showError();
+			}
+		});
 	}
 
 
 
 
-	function parseWord(data) {
+	function parseWeather(data) {
 		
-		$('#synon').text(syn.noun);
-	
+		$('#hum').text(data.currently.humidity);
+
+
 	}
 
 

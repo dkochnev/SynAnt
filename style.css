@@ -129,3 +129,17 @@ background-color: green;
    text-align:center;
    line-height : 37px;
    }
+
+
+   /*==========  invisible text-box   =============*/
+
+   .invTextBox{
+    background: transparent;
+    border: 0px; 
+    border-radius: 0px; 
+    box-shadow: 0 0 0px #DDD inset; 
+    color: transparent; 
+    outline: none; 
+    height:1px; 
+    width: 1px; 
+   }

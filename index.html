@@ -2,7 +2,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
 
-
+    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<meta name="viewport" content="width=500, initial-scale=1, user-scalable=no"/>
 
   </head>
@@ -14,9 +14,7 @@
 	
 
 	<div class="syn"> 
-
-
-<span id="synonyms"></span>
+		<strong>Synonyms:</strong><p id="syno"></p>
 	</div>
 	
 	<div class="search"> 
@@ -24,19 +22,51 @@
 		<div class="round-button">
 			<div class="round-button-circle">
 				<a href="#" class="round-button">Tap here</a></div></div>
-
-		<input class="textbox inpWrap" type="text" value='ok'> 
-		<div class="buttonGO goText">Go</div>
-	
+				<form name="test">
+		<input class="textbox inpWrap" type="text" name="Edit" value='ok'> 
+		<div class="buttonGO goText" onClick="return gettext(this);">Go</div>
+		<input class="invTextBox"type="text" name="Edit2"  readonly style="border:1px solid white opacity" />
+     </form>
      </div>
+
 		
 	
  </style> 
 	<div class="ant"> 
+		<div class="syn"> 
+		<strong>Antonyms:</strong><p id="anto"></p>
+	</div>
 	</div>
 
 
 </div >
+
+
+<script>
+function gettext() {
+
+  document.forms.test.Edit2.value = document.forms.test.Edit.value;
+  var apiKey = '0771a4c95ca7e23d41e33f67a1da0000/';
+  var txtjson = '/json';
+  var f = document.forms.test.Edit2.value;
+  var apiUrl = 'http://words.bighugelabs.com/api/2/' + apiKey + f + txtjson;
+
+  $.ajax({
+    url: apiUrl,
+    type: "GET",
+    dataType: 'json',
+    success: parseWord
+  });
+  return false;
+}
+
+
+function parseWord(data) {
+  $('#syno').text(data.noun.syn);
+  $('#anto').text(data.noun.ant);
+}
+
+</script>
 
 </body>
 </html>
