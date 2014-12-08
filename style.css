@@ -1,10 +1,15 @@
-body{ height:550px; } 
+body, html {
+    height:  100%;
+    margin:  0px auto;
+    padding: 0px auto;
+}
 
 div.fullscreen{ 
-display:block; 
-position:absolute; 
-top:0; 
-left:0; 
+height:     auto;       /* These two lines were the key. */
+    min-height: 100%
+    /*overflow:   hidden;*/ /* Do not use this, it crops in small browsers. */
+    margin:     0px auto;
+    padding:    0px auto;
 
 
 width:100%; 
