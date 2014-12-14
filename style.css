@@ -17,10 +17,10 @@ background-color: green;
 } 
 
 .syn{
-  width:99%;
+  width:98%;
   height:33%;
   background-color:#fbfbfb;
-  overflow: auto;
+  /*overflow: auto;*/
   overflow-x: hidden;
 }
 
@@ -31,10 +31,10 @@ background-color: green;
 }
 
 .ant{
-  width:99%;
+  width:98%;
   height:33%;
   background-color:#fbfbfb;
-  overflow: auto;
+  /*overflow: auto;*/
   overflow-x: hidden;
 }
 
