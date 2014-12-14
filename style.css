@@ -20,8 +20,9 @@ background-color: green;
   width:98%;
   height:33%;
   background-color:#fbfbfb;
-  /*overflow: auto;*/
-  overflow-x: hidden;
+  overflow: auto;
+  word-wrap: break-word;
+ /* overflow-x: hidden;*/
 }
 
 .search{
@@ -34,8 +35,9 @@ background-color: green;
   width:98%;
   height:33%;
   background-color:#fbfbfb;
-  /*overflow: auto;*/
-  overflow-x: hidden;
+  overflow: auto;
+  word-wrap: break-word;
+  /*overflow-x: hidden;*/
 }
 
 
