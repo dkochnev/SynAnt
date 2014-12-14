@@ -40,6 +40,11 @@ background-color: green;
   /*overflow-x: hidden;*/
 }
 
+.resText{
+  width:99%;
+  position: center;
+  margin: 1%;
+}
 
 /*  ====================    input text   ================   */
 
