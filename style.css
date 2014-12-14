@@ -17,20 +17,20 @@ background-color: green;
 } 
 
 .syn{
-  width:100%;
+  width:99%;
   height:33%;
   background-color:#fbfbfb;
   overflow: auto;
 }
 
 .search{
-  width:100%;
+  width:99%;
   height:34%;
   background-color:#d9d9d9;
 }
 
 .ant{
-  width:100%;
+  width:99%;
   height:33%;
   background-color:#fbfbfb;
   overflow: auto;
@@ -48,16 +48,15 @@ background-color: green;
     outline: none; 
     height:25px; 
     width: 160px; 
-   
    } 
 	
 
 
 .inpWrap {
 	position: fixed;
-  	left: 50%;
+  	left: 25%;
   	top: 58%; 
-    -webkit-transform: translate(-50%, 0); 
+    /*-webkit-transform: translate(-50%, 0); */
     
 }
 
@@ -104,7 +103,7 @@ background-color: green;
 }
 
 /* ==========================  Button GO ============================*/
-/*.buttonGO {
+.buttonGO {
   width: 40px;
   height: 40px;
   position:fixed;
@@ -138,7 +137,7 @@ background-color: green;
    line-height : 37px;
    }
 
-*/
+
    /*==========  invisible text-box   =============*/
 
    .invTextBox{
