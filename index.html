@@ -78,7 +78,8 @@ function gettext() {
 
 
 function parseWord(data) {
-  $('#syno').text(data.noun.syn);
+  $('#syno').text(data.noun.syn[0] + ", " + data.noun.syn[1] + ", " + data.noun.syn[2]  + ", " + data.noun.syn[3] + ", " + data.noun.syn[4] + ", " + data.noun.syn[5] + ", " + data.noun.syn[6] + ", " + data.noun.syn[7] + ", " + data.noun.syn[8] + ", " + data.noun.syn[9] + ", " + data.noun.syn[10] + ", " + data.noun.syn[11] + ", " + data.noun.syn[12] + ", " + data.noun.syn[13] + " " + data.noun.syn[14] + ", " + data.noun.syn[15] + ", " + data.noun.syn[16] + ", " + data.noun.syn[17] + ", " + data.noun.syn[18] + ", " + data.noun.syn[19] + ", " + data.noun.syn[20] + ", " + data.noun.syn[21]);
+  
   $('#anto').text(data.noun.ant);
 
 }
