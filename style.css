@@ -82,7 +82,7 @@ background-color: green;
 .round-button-circle {
   width: 90px;
   height: 90px;
-  position:fixed;
+  position:absolute;
   top: 45%;
   left: 50%;
    transform: translate(-50%, -50%);
@@ -117,7 +117,7 @@ background-color: green;
 .buttonGO {
   width: 40px;
   height: 40px;
-  position:fixed;
+  position:absolute;
   top: 57%;
   left: 79%;
    border-top: 1px solid #96d1f8;
