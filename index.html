@@ -80,9 +80,9 @@ function gettext() {
 
 
 function parseWord(data) {
-  $('#syno').text(data.noun.syn);
+  $('#syno').text(data.noun.syn.join(', '));
   
-  $('#anto').text(data.noun.ant);
+  $('#anto').text(data.noun.ant.join(', '));
 
 }
 
